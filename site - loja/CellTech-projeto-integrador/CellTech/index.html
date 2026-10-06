@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CellTech - sistema de venda e gerenciamento de celulares">
+  <title>CellTech | Gestão inteligente para sua loja</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark" aria-label="Logo CellTech"><span>▰</span></div>
+        <div><strong>Cell<span>Tech</span></strong><small>gestão mobile</small></div>
+      </div>
+      <div class="store-status"><span class="status-dot"></span><span>Loja aberta</span><b>●</b></div>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <p class="nav-label">Experiência</p>
+        <button class="nav-item" data-section="store"><span class="nav-icon">⌂</span>Loja online <span class="nav-badge store-badge">NOVO</span></button>
+        <p class="nav-label">Visão geral</p>
+        <button class="nav-item active" data-section="dashboard"><span class="nav-icon">⌂</span>Dashboard</button>
+        <button class="nav-item" data-section="products"><span class="nav-icon">▣</span>Produtos</button>
+        <button class="nav-item" data-section="clients"><span class="nav-icon">♙</span>Clientes</button>
+        <p class="nav-label">Operação</p>
+        <button class="nav-item" data-section="sales"><span class="nav-icon">↗</span>Vendas</button>
+        <button class="nav-item" data-section="stock"><span class="nav-icon">▤</span>Estoque <span class="nav-badge" id="lowStockBadge">0</span></button>
+        <button class="nav-item" data-section="reports"><span class="nav-icon">▥</span>Relatórios</button>
+      </nav>
+      <div class="sidebar-footer"><div class="user-avatar">AD</div><div><strong>Admin</strong><span>Administrador</span></div><button class="icon-button" id="logoutButton" title="Sair">↪</button></div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar"><button class="mobile-menu" id="menuButton">☰</button><div class="breadcrumb"><span>CellTech</span><b>/</b><strong id="pageLabel">Dashboard</strong></div><div class="topbar-actions"><button class="icon-button notification" title="Notificações">♧<i></i></button><div class="top-user"><div class="user-avatar small">AD</div><div><strong>Alexandre Dias</strong><span>Administrador</span></div><span class="chevron">⌄</span></div></div></header>
+      <div class="content-area">
+        <section class="page-section" id="storeSection"></section>
+        <section class="page-section active" id="dashboardSection"></section>
+        <section class="page-section" id="productsSection"></section>
+        <section class="page-section" id="clientsSection"></section>
+        <section class="page-section" id="salesSection"></section>
+        <section class="page-section" id="stockSection"></section>
+        <section class="page-section" id="reportsSection"></section>
+      </div>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="loginModal"><div class="login-card"><div class="login-brand"><div class="brand-mark large"><span>▰</span></div><strong>Cell<span>Tech</span></strong></div><p class="eyebrow">PAINEL ADMINISTRATIVO</p><h1>Controle sua loja<br><em>com clareza.</em></h1><p class="login-copy">Acompanhe produtos, clientes e vendas em um só lugar.</p><form id="loginForm"><label>Usuário ou e-mail<input name="user" type="text" placeholder="ex: admin@celltech.com" required></label><label>Senha<div class="password-field"><input name="password" type="password" placeholder="Digite sua senha" minlength="4" required><button type="button" id="togglePassword">◉</button></div></label><div class="form-options"><label class="check-label"><input type="checkbox" checked> Lembrar de mim</label><a href="#" onclick="return false">Esqueci a senha</a></div><button class="primary-button full" type="submit">Entrar no painel <span>→</span></button></form><p class="login-hint">Demonstração acadêmica · qualquer senha com 4+ caracteres</p></div></div>
+
+  <div class="modal-backdrop hidden" id="formModal"><div class="form-modal"><div class="modal-header"><div><p class="eyebrow" id="modalEyebrow">CADASTRO</p><h2 id="modalTitle">Novo registro</h2></div><button class="modal-close" id="closeFormModal">×</button></div><form id="recordForm"></form></div></div>
+  <div class="toast" id="toast"><span>✓</span><div><strong id="toastTitle">Tudo certo</strong><p id="toastMessage">Operação realizada.</p></div></div>
+  <script src="js/app.js"></script>
+</body>
+</html>

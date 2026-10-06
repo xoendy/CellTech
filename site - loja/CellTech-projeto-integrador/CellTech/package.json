@@ -1,0 +1,14 @@
+{
+  "name": "celltech",
+  "version": "1.0.0",
+  "description": "Sistema de vendas e gerenciamento de celulares com Node.js, Express e SQLite",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.7.0",
+    "express": "^4.21.2"
+  }
+}

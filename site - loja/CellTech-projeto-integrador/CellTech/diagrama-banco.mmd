@@ -1,0 +1,36 @@
+erDiagram
+    PRODUTOS {
+        INTEGER id PK
+        TEXT nome
+        TEXT marca
+        TEXT modelo
+        TEXT armazenamento
+        TEXT cor
+        REAL preco
+        INTEGER estoque
+        TEXT imagem
+        TEXT emoji
+        TEXT tema
+    }
+
+    CLIENTES {
+        INTEGER id PK
+        TEXT nome
+        TEXT cpf
+        TEXT telefone
+        TEXT email
+        TEXT endereco
+    }
+
+    VENDAS {
+        INTEGER id PK
+        INTEGER clienteId FK
+        INTEGER produtoId FK
+        INTEGER quantidade
+        REAL total
+        TEXT pagamento
+        TEXT data
+    }
+
+    CLIENTES ||--o{ VENDAS : realiza
+    PRODUTOS ||--o{ VENDAS : participa
